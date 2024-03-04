@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* overflow:hidden;
+  overflow-y:hidden; */
+  background: transparent linear-gradient(180deg, #000000 0%, #000e09 100%) 0%
+    0% no-repeat padding-box fixed;
+}
+
+body {
+  mix-blend-mode: normal;
+  background-size: cover;
+  border-radius: 28px;
+  opacity: 1;
+  /* height:100vh; */
+  /* width:100vw; */
+  color: #fff;
+}
+
+.dashboard {
+  margin-left: 15px;
+  margin-right: 17px;
+  overflow: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.employees {
+  padding: 0 3%;
+  width: 100%;
+  height: 100%;
+}
+
+.profile {
+  margin-top: 40px;
+  display: flex;
+  justify-content: end;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5px 0 30px 0;
+}
+.logo img {
+  width: 71px;
+  height: 70px;
+}
+
+.float {
+  position: absolute;
+  top: 0;
+  margin-left: 100px;
+  margin-top: -12px;
+  border-radius: 50%;
+  background: rgba(94, 94, 94, 0.4) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 4px 0px #00000040;
+  border: 1px solid #fffefe00;
+  padding: 5px 7px;
+  backdrop-filter: blur(5px);
+}
+.text-float {
+  opacity: 1;
+  z-index: 2;
+  color: #36a546;
+  /* font-size:20px; */
+  width: 15px;
+  height: 23px;
+  text-align: center;
+}
+
+.main-box {
+  margin-top: 52px;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
+  border-radius: 25px;
+  background: rgba(94, 94, 94, 0.4) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 4px 0px #00000040;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  z-index: 0;
+  margin-bottom: auto;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans 3";
+  color: #ffffffb3;
+  font-weight: normal;
+  width: 100%;
+  height: 45px;
+  background: rgba(26, 44, 44, 0.84) 0% 0% no-repeat padding-box;
+  font-size: 18px;
+  border-radius: 25px;
+  letter-spacing: 0.4px;
+  opacity: 0.84;
+  z-index: 2;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-around;
+  margin-top: 8%;
+  width: 100%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Source Sans 3";
+  font-size: 15px;
+}
+
+.flexRow .left-align {
+  text-align: left;
+  opacity: 0.8;
+}
+
+.flexRow .right-align {
+  text-align: right;
+  opacity: 0.8;
+  color: #36a546;
+  font-size: 18px;
+  margin-right: 20%;
+}
+
+.dash-bar {
+  width: 100%;
+  height: 11px;
+  margin: 5px 0px 25px 0px;
+}
+.dash-per {
+  background: #36a54680 0% 0% no-repeat padding-box;
+  border: 1px solid #36a546;
+  border-radius: 10px;
+  opacity: 1;
+  height: 100%;
+}
+.mon {
+  width: 6px;
+}
+.tue {
+  width: 140px;
+}
+.wed {
+  width: 183px;
+}
+.thu {
+  width: 132px;
+}
+.fri {
+  width: 132px;
+}
+.sat {
+  width: 146px;
+}
+.flex2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 28px;
+  color: #36a546;
+  background: transparent linear-gradient(262deg, #0f2323 0%, #0f2323 40%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: inset 8px 4px 4px #00000040;
+  border: 1px solid #0f2323;
+  opacity: 1;
+  position: fixed;
+  bottom: 0%;
+  margin-top: 40%;
+  border-radius: 25px;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.simple_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  font-size: 30px;
+  color: #36a546;
+  text-decoration: none;
+}
+
+.nav-selection {
+  background: #38383880 0% 0% no-repeat padding-box;
+  backdrop-filter: blur(7px);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+/* Employess.jsx css */
+.search_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 55px;
+  background: rgba(94, 94, 94, 0.4) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 4px 0px #00000040;
+  backdrop-filter: blur(5px);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 2px 20px;
+}
+.search_box input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.search_box button {
+  width: 10%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search {
+  font-size: 30px;
+  opacity: 0.5;
+}
+
+.list {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(94, 94, 94, 0.4) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 4px 0px #00000040;
+  backdrop-filter: blur(5px);
+  width: 85%;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: "Source Sans 3";
+  margin-bottom: 10%;
+}
+
+.alter_element {
+  margin-left: auto;
+}
+
+.absolute {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  border-radius: 50%;
+  background: rgba(94, 94, 94, 0.4) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 4px 0px #00000040;
+  /* border: 1px solid #fffefe00; */
+  padding: 5px 9px;
+  text-align: center;
+}
+
+.inner_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.inner_flex2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.inner_flex .left {
+  text-align: left;
+  padding: 5px 5px 10px 5px;
+}
+
+.right {
+  margin-right: auto;
+  margin-left: 3%;
+}
+
+.dob {
+  color: #b77420;
+}
+.inner_flex .center {
+  text-align: right;
+  margin-left: 3%;
+  margin-right: 2%;
+}
+
+.role {
+  color: #36a546;
+}
+
+/* Login Page Css */
+.login_page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.mainlogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30%;
+}
+
+.mainlogo img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 3%;
+}
+
+.mainlogo p {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Source sans 3";
+  letter-spacing: 0.02px;
+  color: #36a546cc;
+  opacity: 0.5;
+}
+
+.login-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.login-details input {
+  background: none;
+  outline: none;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 5px 25px;
+  height: 42px;
+  font-size: 18px;
+  margin-bottom: 10%;
+  background: #1f191966 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 3px 3px #fffdfd40, 3px 3px 3px #4a494947;
+  border: none;
+  color: #fff;
+}
+
+.login-details input:active,.login-details input:focus{
+  border:1px solid #36a546;
+}
+
+.btn {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent
+    linear-gradient(180deg, #00ff2580 0%, #000000 100%, #36a54680 100%) 0% 0%
+    no-repeat padding-box;
+  height: 42px;
+  border: 2px solid #8cff0026;
+  padding: 5px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 10%;
+  text-decoration: none;
+  font-family: "Source Sans 3";
+}
+
+.login-details p {
+  margin-top: 8%;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Source Sans 3";
+  letter-spacing: 0.02px;
+  color: #36a546;
+}
+
+.wrong {
+  text-align: center;
+  font-family: "Source Sans 3";
+}
+
+@media (max-width: 1920px) and (min-width: 913px) {
+  /* login page css */
+
+  .mainlogo {
+    padding-top: 10%;
+  }
+
+  .login-details{
+    margin-top:4%;
+  }
+  .login-details input{
+    width:50%;
+    margin-bottom:2%;
+  }
+
+  .btn{
+    width:50%;
+    margin-top:4%;
+  }
+  .login-details p{
+    margin-top:2%;
+  }
+  /* employees.jsx css */
+  .search_box {
+    width:50%;
+  }
+  .list{
+    margin-top:6%;
+  }
+  .list-item{
+    margin-bottom:4%;
+    width:60%;
+  }
+}
